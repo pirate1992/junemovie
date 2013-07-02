@@ -1,0 +1,47 @@
+		<nav>
+			<ul>
+				<li><a href="moive.html">首页</a></li>
+				<li><a href="users.html">最新电影</a></li>
+				<li><a href="third 12.html">电影随心看</a></li>	
+				<div>
+				<li><a href="indexs.html">登录</a></li>
+				<li><a href="indexs.html">注册</a></li>
+			</div> 			
+			</ul> 
+		</nav>			
+	   	
+				<h1><%= @movie.name %></h1>
+		<section>	
+	       <div id="video">
+	    		<%=video_tag(@movie.video_file, controls: true )%>
+	       </div>
+	   </section>
+	   <section>
+			<div id="content">	
+			   <div id="left"> 
+			      <div id="header">			
+		             <h3><%= @movie.name %> 剧照</h3>
+		             <article style="border-right-style:none;height:auto;">
+		             	<div id="pic1">
+		             		<%=image_tag(@movie.poster,width:'145',height:'145')  %>	
+		             	</div>		          
+		            </div>        	
+
+		             </article>	
+		                        	
+		        </div> 
+		        <div id="right">
+		        	<h3>电影简介</h3>
+		        	<ul>		        		
+		        		<marquee direction="UP" onmouseout="this.start();"onmouseover="this.stop();"stytle="margin-top:15px;padding:0px;width:95%;font-size:30px;height=250px;overflow:hidden"scrolldelay=200 scrollamount=1>
+		        			
+		        			<p>　 <%= @movie.summary %> </p>   
+		        		</marquee>
+		            </ul>
+		        </div>       		    
+	        </div>
+		</section>
+
+
+<%= link_to 'Edit', edit_movie_path(@movie) %> |
+<%= link_to 'Back', movies_path %>

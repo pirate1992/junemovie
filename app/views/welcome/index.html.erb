@@ -1,0 +1,122 @@
+<nav>
+				<ul>
+					<li><a href="moive.html">首页</a></li>
+					<li><a href="users.html">最新电影</a></li>
+					<li><a href="third 12.html">电影随心看</a></li>	
+					<div >
+					   <li><a href="indexs.html">登录</a></li>
+					   <li><a href="indexs.html">注册</a></li>
+				    </div> 	
+				</ul>
+			 </nav>		
+	<div id="header">
+			<h1>六月</h1>
+			<h2>电影开始的地方</h2>
+	</div>
+	<div class="box">
+    <ul class="list">
+        <li class="slide"><%= image_tag("chaoren.jpg",width:'1000',height:'375' )%></li>
+        <li class="slide"><%= image_tag("xiaoxiao.jpg",width:'1000',height:'375' )%></li>
+        <li class="slide"><%= image_tag("huangxiaom.jpg",width:'1000',height:'375' )%></li>
+    	<li class="slide"><%= image_tag("shengdan.jpg",width:'1000',height:'375' )%></li>
+        
+    </ul>
+    <div class="index">
+        <a href="javascript:" class="index_1">1</a>
+        <a href="javascript:" class="index_2">2</a>
+        <a href="javascript:" class="index_3">3</a>
+        <a href="javascript:" class="index_4">4</a>
+    </div>
+	</div>
+	<div id="content">
+		<div id="leftmain">
+			<div id="menutitle">
+				<h3>热映资讯</h3>
+			</div>	
+			<div id="menu">
+				<ul>
+					<li><a href="javascript:void(null):" tilte="">超人票房过亿</a></li>
+					<li><a href="javascript:void(null):" tilte="">小时代6月27日上映</a></li>
+					<li><a href="javascript:void(null):" tilte="">中国合伙人-中国人的美国梦</a></li>
+					<li><a href="javascript:void(null):" tilte="">圣诞玫瑰——罗生门</a></li>
+					<li><a href="javascript:void(null):" tilte="">麦田</a></li>
+					<li><a href="javascript:void(null):" tilte="">杀戒-谋女郎倪妮</a></li>
+				</ul>
+
+			</div>
+		</div>
+		<div id="rightmain">
+			<div id="left1">
+				<div id="newstitle">
+					<h3>正在热映</h3>
+				</div>
+			</div>
+			<div id="right1">
+				<p><a href="third 12.html"><h3>随便看看</h3></a></p>
+			</div>
+				<div class="rows">
+					<div class="pic">
+						<%= image_tag("chaoren2.jpg",width:'145',height:'145')%>
+					</div>
+					<div class="picText">
+						<%= link_to "超人", movie_path(1) %>
+					</div>
+				</div>
+				<div class="rows">
+					<div class="pic">
+						<%= image_tag("shengdanmeigui.jpg",width:'145',height:'145')%>
+					</div>
+					<div class="picText">
+						<%= link_to "圣诞玫瑰", movie_path(2) %>
+					</div>
+				</div>
+				<div class="rows">
+					<div class="pic">
+						<%= image_tag("zhentan.jpg",width:'145',height:'145')%>
+					</div>
+					<div class="picText">
+						<%= link_to "侦探", movie_path(3) %>
+					</div>
+				</div>
+				<div class="rows">
+					<div class="pic">
+						<%= image_tag("xiaoshidai.jpg",width:'145',height:'145')%>
+					</div>
+					<div class="picText">
+						<%= link_to "小时代", movie_path(4) %>
+					</div>
+				</div>
+				<div class="rows">
+					<div class="pic">
+						<%= image_tag("cafa.jpg",width:'145',height:'145')%>
+					</div>
+					<div class="picText">
+						<%= link_to "咖啡", movie_path(5) %>
+					</div>
+				</div>
+				<div class="rows">
+					<div class="pic">
+						<%= image_tag("kaixinchaoren.jpg",width:'145',height:'145')%>
+					</div>
+					<div class="picText">
+						<%= link_to "开心超人", movie_path(6) %>
+					</div>
+				</div>
+				<div class="rows">
+					<div class="pic">
+						<%= image_tag("zhongguohehuoren.jpg",width:'145',height:'145')%>
+					</div>
+					<div class="picText">
+						<%= link_to "中国合伙人", movie_path(7) %>
+					</div>
+				</div>
+				<div class="rows">
+					<div class="pic">
+						<%= image_tag("sami.jpg",width:'145',height:'145')%>
+					</div>
+					<div class="picText">
+						<%= link_to "萨米大冒险", movie_path(8) %>
+				</div>	
+			
+		</div>
+	</div>

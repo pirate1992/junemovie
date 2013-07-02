@@ -1,4 +1,10 @@
 Junemovie::Application.routes.draw do
+  resources :movies
+
+
+  root :to => "welcome#index"
+  get 'welcome/index' => "welcome#index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
