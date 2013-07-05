@@ -128,7 +128,7 @@ nav ul li a {
 
 nav ul li a:hover{
 
-	background-color: white;
+	background-color: #03c;
 }
 
 nav ul div {
@@ -445,4 +445,30 @@ body #index{
 	height: 500px;
 	font : 1.65em Arial, sans-serif;
 	color : #454545;
+}
+body #headline{
+	text-align: center;
+	font-size: 250%;
+	font-weight: bold;
+}
+
+body #con p{
+	text-indent: 2em;
+	width: 900px;
+	height: 90px;
+	font-size: 20px;
+	letter-spacing: 2px;
+	line-height: 24px;
+	text-align: left;
+}
+
+body #author{
+	text-align: center;
+	font-size: 120%;
+}
+body #demo1{
+	margin-left: 200px;
+}
+body #footer{
+	margin-top: 200px;
 }
