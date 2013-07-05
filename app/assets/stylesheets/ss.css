@@ -5,7 +5,8 @@ body {
 	line-height : 1.5em;
 	background : #fff image:url("bog.jpg")repeat-x top;
 	color : #454545;
-	}
+}
+
 @-moz-keyframes slide {
     from, to { top: 0; }
     12.5% { top: 0; }
@@ -154,7 +155,7 @@ h2 {
 
 	font : bold 2.8em Arial, Sans-Serif;
 	margin : 0;
-	letter-spacing : 1px;
+	letter-spacing : 2px;
 	color : #616161;
 	text-align: center;
 
@@ -448,10 +449,9 @@ h2 {
 }
 
 form{
-
     font-weight: bold;
 	float: left;
-	margin-top: 20px;
+	margin-top: 50px;
 	margin-left: 180px;
 	height: 900px;
 }
@@ -476,14 +476,18 @@ body #index{
 	font : 1.65em Arial, sans-serif;
 	color : #454545;
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 重新完善登入页面
 body #headline{
 	text-align: center;
 	font-size: 250%;
 	font-weight: bold;
 }
 
+<<<<<<< HEAD
 body #con p{
 	text-indent: 2em;
 	width: 900px;
@@ -491,6 +495,11 @@ body #con p{
 	font-size: 20px;
 	letter-spacing: 2px;
 	line-height: 24px;
+=======
+body #con{
+	width: 900px;
+	height: 100px;
+>>>>>>> 重新完善登入页面
 	text-align: left;
 }
 
@@ -498,6 +507,7 @@ body #author{
 	text-align: center;
 	font-size: 120%;
 }
+<<<<<<< HEAD
 body #demo1{
 	margin-left: 200px;
 }
@@ -511,3 +521,8 @@ body #footer{
 .related-pic-bd.narrow li{margin-right:3px;}
 
 >>>>>>> 制作了页面评论区，建立了一对多的图片数据。
+=======
+body #footer{
+	margin-top: 200px;
+}
+>>>>>>> 重新完善登入页面
