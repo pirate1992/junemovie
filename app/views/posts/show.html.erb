@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Post:</b>
+  <%= @post.post_id %>
+</p>
+
+<p>
+  <b>Movie:</b>
+  <%= @post.movie_id %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @post.image %>
+</p>
+
+<p>
+  <b>Movie:</b>
+  <%= @post.movie %>
+</p>
+
+
+<%= link_to 'Edit',  edit_movie_post_path([@movie, @post]) %> 
+<%= link_to 'Back', movie_posts_path %>
