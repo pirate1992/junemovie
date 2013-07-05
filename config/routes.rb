@@ -2,8 +2,6 @@ Junemovie::Application.routes.draw do
   devise_for :users
 
   resources :news
-  resources :movies
-
   resources :movies do
     resources :posts, :comments
   end

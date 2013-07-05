@@ -1,6 +1,7 @@
 class MoviesController < ApplicationController
   # GET /movies
   # GET /movies.json
+  before_filter :authenticate_user!
   def index
     @movies = Movie.all
 
