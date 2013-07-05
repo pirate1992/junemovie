@@ -3,11 +3,10 @@ class NewsController < ApplicationController
   # GET /news.json
   def index
     @news = News.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @news }
-    end
+    # respond_to do |format|
+    #   format.html # index.html.erb
+    #   format.json { render json: @news }
+    # end
   end
 
   # GET /news/1
