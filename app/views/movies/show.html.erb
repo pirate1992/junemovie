@@ -1,47 +1,62 @@
-		<nav>
-			<ul>
-				<li><a href="moive.html">首页</a></li>
-				<li><a href="users.html">最新电影</a></li>
-				<li><a href="third 12.html">电影随心看</a></li>	
-				<div>
-				<li><a href="indexs.html">登录</a></li>
-				<li><a href="indexs.html">注册</a></li>
-			</div> 			
-			</ul> 
-		</nav>			
-	   	
-				<h1><%= @movie.name %></h1>
-		<section>	
-	       <div id="video">
-	    		<%=video_tag(@movie.video_file, controls: true )%>
-	       </div>
-	   </section>
-	   <section>
-			<div id="content">	
-			   <div id="left"> 
-			      <div id="header">			
-		             <h3><%= @movie.name %> 剧照</h3>
-		             <article style="border-right-style:none;height:auto;">
-		             	<div id="pic1">
-		             		<%=image_tag(@movie.poster,width:'145',height:'145')  %>	
-		             	</div>		          
-		            </div>        	
 
-		             </article>	
-		                        	
-		        </div> 
-		        <div id="right">
-		        	<h3>电影简介</h3>
-		        	<ul>		        		
-		        		<marquee direction="UP" onmouseout="this.start();"onmouseover="this.stop();"stytle="margin-top:15px;padding:0px;width:95%;font-size:30px;height=250px;overflow:hidden"scrolldelay=200 scrollamount=1>
-		        			
-		        			<p>　 <%= @movie.summary %> </p>   
-		        		</marquee>
-		            </ul>
-		        </div>       		    
-	        </div>
-		</section>
+<h1><%= @movie.name %></h1>
+<section>	
+   <div id="video">
+		<%=video_tag(@movie.video_file, controls: true )%>
+   </div>
+</section>
+<section>
+	<div id="content">	
+		<div id="rightmain1"> 
+			<h3><%= @movie.name %>的预告片和图片 · · · · · · </h3>
+				<div class="related-pic-bd narrow">
+           		<% for post in @movie.posts %>
+           		
+           			<li> <%= image_tag(post.image,width:'100',height:'100') %></li>
+           		
+           		<% end %>
+                 </div> 
+    		<h3>喜欢这部电影的人也喜欢 · · · · · ·</h3>
+			<h3>评论</h3>
+			<div id="lr">
+				<% @movie.comments.each do |comment| %>
+				<div id="l">
+					<p><%= image_tag(comment.cimage,width:'45',height:'45') %></p>
+				</div>
+				<div id="r">
+				<p ><b id="user"><%= comment.commenter %></b>:
+				<%= comment.body %>
+				</p>
+				</div>
+				<% end %>	
+			</div>
+			<%= form_for([@movie, @movie.comments.build]) do |f| %>
+			<div class="field">
+				<%= f.label :用户 %>
+				<%= f.text_field :commenter %>
+			</div>
+			<div class="field">
+				<%= f.label :评论 %>
+				<%= f.text_field :body %>
+			</div>
+			<div class="field">
+				<%= f.label :头像 %>
+				<%= f.text_field :cimage %>
+			</div>
+			<div class="actions">
+				<%= f.submit %>
+			</div>
+			<% end %>                	
+    	</div> 
+	    	<div id="leftmain1">
+	        	<p id="notice"><%= notice %></p>		
+				<b>Name:</b>
+				<%= @movie.name %></br>
+				<b>Summary:</b>
+				<p><%= @movie.summary %></br>	
+			</div>
+	</div>	
+</section>
 
-
-<%= link_to 'Edit', edit_movie_path(@movie) %> |
+<%= link_to 'Edit', edit_movie_path(@movie) %> 
 <%= link_to 'Back', movies_path %>

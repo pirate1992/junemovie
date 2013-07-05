@@ -1,12 +1,11 @@
 body {
-padding : 0;
-margin : 0;
-font : 0.74em Arial, sans-serif;
-line-height : 1.5em;
-background : #fff url(images/bog.jpg )repeat-x top;
-color : #454545;
-}
-
+	padding : 0;
+	margin : 0;
+	font : 0.74em Arial, sans-serif;
+	line-height : 1.5em;
+	background : #fff image:url("bog.jpg")repeat-x top;
+	color : #454545;
+	}
 @-moz-keyframes slide {
     from, to { top: 0; }
     12.5% { top: 0; }
@@ -27,6 +26,8 @@ color : #454545;
     75% { top: -1125px; }
     87.5% { top: -1125px; }
 }
+
+
 
 @-moz-keyframes index_1 {
     from, 25%, to { background-color: rgba(0,0,0,.5); }
@@ -160,7 +161,7 @@ h2 {
 }
 
 #content {
-	width: 1280px;
+	width: 1050px;
 	height: 1050px;
 	margin-left: 120px;
 	border-bottom-width: 4px;
@@ -341,33 +342,69 @@ h2 {
 
 }
 
-#right ul {
+#right {
+
+	margin-top: 100px;
+	height: 306px;
+	width: 300px;
 	float: right;
-	width: 450px;
-    margin-right: 300px;
-    margin-top: 10px;
+	
+}
 
-	height: 300px;
-	display: block;
-	padding: 15px;
-	border: 1px solid #999999;
-	box-shadow: rgb(150,150,150) 5px 5px 10px;  	
-    background: -webkit-linear-gradient(top,#FFFFFF,#999999);
-	background: -moz-linear-gradient(top,#FFFFFF,#999999);
-	}
+#leftmain1 {
+	width: 338px;
+	height: 750px;
+	margin-left: 55px;
+	float:left;
+	border: 1px ;
 
-#right p{
-	text-indent: 2em;
-	height: 250px;	
-	font-family: "宋体";
+}
+#rightmain1{
+	width:500px;
+	height:750px;
+	margin-left: 100px;
+	float:left;
+	border: 1px ;
 
 }
 
-#right h3{
-	float: right;
-	margin-right: 750px;
-    margin-top:1px;
+#lr{
+	height: auto;
+	width:500px;
+	border:1px solid #ddd;overflow:hidden;*zoom:1;
+	margin-bottom:8px;
+	padding-bottom:8px;
+	
 }
+
+#l{
+	width:50px;
+	height: 55px;
+	float: left;
+
+}	
+	
+
+#r{
+
+	width:450px;
+	height: 55px;
+	float:right;
+	
+}
+
+#r p{
+
+	font : bold 1.0em "宋体";
+	margin-top: 15px;
+}
+
+#r p #user{
+
+	
+	color:#C1CDC1;
+}
+
 
 #watch h3{
 	margin-left: 250px;
@@ -378,6 +415,7 @@ h2 {
 	margin-right: 2cm;
 	margin-top:250px;
 }
+
 #video {
 	text-align: center;
 	display: block;
@@ -395,21 +433,13 @@ h2 {
 	text-align: center;
     margin-top: 200px;
 }
-#pic1 ul {
+#pic1  {
 	float: left;
 	width:200px;
 	height: auto;
-	margin-left: 50px;
+	margin-left: 150px;
 }
 
-#pic1 img:hover{
-	width:200px;
-  height:200px;
-   transform:rotate(10deg);
-   -moz-transform:rotate(10deg); /* Firefox 4 */
-   -webkit-transform:rotate(10deg); /* Safari and Chrome */
-   -o-transform:rotate(10deg); /* Opera */
-}
 
 #contactFormArea {
 	margin-top: 40px;
@@ -446,6 +476,8 @@ body #index{
 	font : 1.65em Arial, sans-serif;
 	color : #454545;
 }
+
+
 body #headline{
 	text-align: center;
 	font-size: 250%;
@@ -472,3 +504,10 @@ body #demo1{
 body #footer{
 	margin-top: 200px;
 }
+
+
+.related-pic-bd{margin-right:-3px; overflow:hidden; *zoom:1; letter-spacing:-0.31em; *letter-spacing:normal;}
+.related-pic-bd li{display:inline-block; *display:inline; *zoom:1; vertical-align:top; letter-spacing:normal; margin-right:15px;}
+.related-pic-bd.narrow li{margin-right:3px;}
+
+>>>>>>> 制作了页面评论区，建立了一对多的图片数据。
