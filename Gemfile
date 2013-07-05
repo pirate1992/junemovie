@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'pg'
 gem 'devise'
 gem 'carrierwave'
+gem 'annotate'
 
 gem 'carrierwave'
 # Gems used only for assets and not required
