@@ -1,9 +1,10 @@
 body {
-	padding : 0;
-	margin : 0;
-	font : 0.74em Arial, sans-serif;
+	padding: 0;
+	margin: 0;
+	font: 0.74em Arial, sans-serif;
 	line-height : 1.5em;
-	background : #fff image:url("bog.jpg")repeat-x top;
+	background: url("bog.jpg") repeat-x top;
+
 	color : #454545;
 }
 
@@ -523,5 +524,4 @@ body #footer{
 
 body #footer{
 	margin-top: 200px;
-}
 
