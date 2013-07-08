@@ -1,10 +1,9 @@
 body {
 		padding: 0;
 		margin: 0;
-		font: 0.74em Arial, sans-serif;
-		line-height : 1.5em;
+		font: 1.04em Arial, sans-serif;
+		line-height : 2.0em;
 		background: url("bog.jpg") repeat-x top;
-
 		color : #454545;
 }
 
@@ -156,8 +155,7 @@ nav ul li a:hover{
 		background-color: #03c;
 }
 
-nav ul div {
-		
+nav ul div {		
 		display: inline;
 		height: 30px;
 		margin-top: 0px;
@@ -165,22 +163,19 @@ nav ul div {
 }
 
 h1 {
-
-		padding : 20px 0 0 0;
-		font : bold 2.8em Arial, Sans-Serif;
-		margin :0;
-		letter-spacing : 1px;
-		color : #616161;
-		text-align: center;
+	padding : 20px 0 0 0;
+	font : bold 2.8em Arial, Sans-Serif;
+	margin :0;
+	letter-spacing : 1px;
+	color : #616161;
+	text-align: center;
 }
 
 h2 {
-
-		font : bold 2.8em Arial, Sans-Serif;
-		margin : 0;
-		letter-spacing : 2px;
-		color : #616161;
-		text-align: center;
+	font : bold 2.8em Arial, Sans-Serif;
+	letter-spacing : 2px;
+	color : #616161;
+	text-align: center;
 
 }
 
@@ -224,8 +219,7 @@ h2 {
 
 }
 
-#content #leftmain #menu a
-{
+#content #leftmain #menu a{
 		display: block;
 		padding-top: 17px;
 		padding-left: 37px;
@@ -269,23 +263,22 @@ h2 {
 }
 #rightmain {
 	width: 700px;
-	height: 450px;
-	margin-left: 20px;
+	height: 145px;	
 	float: left;
-	border: 1px solid #CCC;
 }
 #rightmain .movies .row {
 	width: 700px;
 	height: 145px;
-	float: left;
 }
 #rightmain .movies .row .movie .movie-poster img {
 	width: 145px;
 	height: 145px;
+	margin-left: 10px;
+	margin-bottom: 20px;
 }
 #rightmain .movies .row .movie .movie-name {
 	text-align: center;
-	width: 145px;
+	width: 100%;
 }
 #rightmain .movies .row .movie .movie-name a:hover {
 	color: blue;
@@ -311,35 +304,6 @@ h2 {
 #newsTitle{
 		height:17px;
 		background-color:#f4f4f4;   
-}
-
-.rows{
-		width:147px;
-		height:172px;
-		float:left;
-		margin:10px 10px;   
-}
-
-.pic{
-		width:145px;
-		height:145px;
-		margin:0 auto;
-		border:1px  #F00;
-}
-
-.picText{
-		height:25px;
-		line-height: 25px;
-		text-align: center;
-		color: #0240a3;
-}
-
-#content #rightmain .rows a
-{
-		width: 182px;
-		background-color: #DCE3ED;
-		border-bottom: 1px solid #eee;
-		height: 27px;
 }
 
 #title {    
@@ -482,10 +446,10 @@ h2 {
 
 form{
 		font-weight: bold;
-		float: left;
-		margin-top: 50px;
-		margin-left: 180px;
-		height: 900px;
+		float:left;
+		margin-top: 100px;
+		margin-left: 350px;
+		height:200px;
 }
 
 #text {
@@ -551,8 +515,6 @@ body #footer{
 .related-pic-bd li{display:inline-block; *display:inline; *zoom:1; vertical-align:top; letter-spacing:normal; margin-right:15px;}
 .related-pic-bd.narrow li{margin-right:3px;}
 
-
-
 body #footer{
 		margin-top: 200px;
-
+}

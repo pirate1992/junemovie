@@ -39,13 +39,10 @@
 			<p><a href="third 12.html"><h3>随便看看</h3></a></p>
 		</div>
 		<div class="movies">
-			<% @movies.each_slice(4).each do |row| %>
-							<% row.each do |movie| %>
-
+			<% @movies.each_slice(4).each do |row| %>			
 				<div class="row">
-
-						<div class="movie">	
-
+					<% row.each do |movie| %>
+						<div class="movie">
 							<div class="movie-poster">
 								<%= image_tag("#{movie.poster}") %>
 							</div>
