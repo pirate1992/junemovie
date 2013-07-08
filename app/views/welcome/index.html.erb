@@ -40,19 +40,17 @@
 		</div>
 		<div class="movies">
 			<% @movies.each_slice(4).each do |row| %>
-							<% row.each do |movie| %>
-
 				<div class="row">
+					<% row.each do |movie| %>
+					<div class="movie">	
 
-						<div class="movie">	
-
-							<div class="movie-poster">
-								<%= image_tag("#{movie.poster}") %>
-							</div>
-							<div class="movie-name">
-								<%= link_to "#{movie.name}", movie_path(movie) %>
-							</div>
+						<div class="movie-poster">
+							<%= image_tag("#{movie.poster}") %>
 						</div>
+						<div class="movie-name">
+							<%= link_to "#{movie.name}", movie_path(movie) %>
+						</div>
+					</div>
 					<% end %>
 				</div>
 			<% end %>
