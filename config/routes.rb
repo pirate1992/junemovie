@@ -3,7 +3,7 @@ Junemovie::Application.routes.draw do
 
   resources :news
   resources :movies do
-    resources :posts, :comments
+  resources :posts, :comments
   end
 
   root :to => "welcome#index"
