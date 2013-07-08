@@ -1,0 +1,10 @@
+zh-CN:
+  activerecord:
+    models:
+      movie: "影片"
+    attributes:
+      movie:
+        name: "名称"
+        poster: "海报"
+        summary: "摘要"
+        video_file: "影片"

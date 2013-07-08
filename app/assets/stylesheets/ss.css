@@ -2,7 +2,7 @@ body {
 		padding: 0;
 		margin: 0;
 		font: 1.04em Arial, sans-serif;
-		line-height : 2.0em;
+		line-height : 1.4em;
 		background: url("bog.jpg") repeat-x top;
 		color : #454545;
 }
@@ -292,8 +292,6 @@ h2 {
 #rightmain .movies .row .movie .movie-name a:hover {
   color: blue;
 }
-
-
 #left1 {
 	float: left;
 	width: 500px;

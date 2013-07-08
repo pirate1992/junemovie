@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Junemovie</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-  <%= stylesheet_link_tag "ss.css" %>
+	<title>Junemovie</title>
+	<%= stylesheet_link_tag    "application", :media => "all" %>
+	<%= javascript_include_tag "application" %>
+	<%= csrf_meta_tags %>
+	<%= stylesheet_link_tag "ss.css" %>
 </head>
 
 <body>
@@ -16,19 +16,19 @@
 		<li><a href="users.html">最新电影</a></li>
 		<li><a href="third 12.html">电影随心看</a></li>	
 	</ul>
- </nav>	
+</nav>
 
 
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 <div>
 	<% if current_user %>
-   		<%= link_to('登出', destroy_user_session_path, :method => :delete) %> |
-   		<%= link_to('修改密碼', edit_registration_path(:user)) %>
- 	<% else %>
-	  		<%= link_to('註冊', new_registration_path(:user)) %> |
-  		<%= link_to('登入', new_session_path(:user)) %>
-		<% end %>
+	<%= link_to('登出', destroy_user_session_path, :method => :delete) %> |
+	<%= link_to('修改密碼', edit_registration_path(:user)) %>
+	<% else %>
+	<%= link_to('註冊', new_registration_path(:user)) %> |
+	<%= link_to('登入', new_session_path(:user)) %>
+	<% end %>
 </div>
 
 <%= yield %>

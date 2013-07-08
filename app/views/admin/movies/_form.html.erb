@@ -1,0 +1,11 @@
+<div class="form-inputs">
+	<%= f.input :name %>
+	<%= f.input :poster %>
+	<%= f.input :summary, as: :text %>
+	<%= f.input :video_file %>
+</div>
+
+<div class="form-actions">
+	<%= f.submit class: "btn btn-primary" %>
+	<%= link_to "Back", admin_movies_path, class: "btn" %>
+</div>
