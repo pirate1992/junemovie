@@ -266,23 +266,39 @@ h2 {
 	height: 145px;	
 	float: left;
 }
+/* line 3, ../sass/test.scss */
 #rightmain .movies .row {
 	width: 700px;
 	height: 145px;
 }
 #rightmain .movies .row .movie .movie-poster img {
-	width: 145px;
-	height: 145px;
-	margin-left: 10px;
-	margin-bottom: 20px;
+  width: 700px;
+  height: 145px;
+  margin-bottom: 20px;
 }
+/* line 8, ../sass/test.scss */
+#rightmain .movies .row .movie {
+  width: 145px;
+  height: 145px;
+  float: left;
+  margin-left: 10px;
+}
+/* line 15, ../sass/test.scss */
+#rightmain .movies .row .movie .movie-poster img {
+  width: 100%;
+  height: 100%;
+}
+/* line 21, ../sass/test.scss */
 #rightmain .movies .row .movie .movie-name {
 	text-align: center;
 	width: 100%;
 }
+/* line 24, ../sass/test.scss */
 #rightmain .movies .row .movie .movie-name a:hover {
-	color: blue;
+  color: blue;
 }
+
+
 #left1 {
 	float: left;
 	width: 500px;
@@ -306,6 +322,10 @@ h2 {
 		background-color:#f4f4f4;   
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4662b903b892488ead6be00417d8bfed7b6f706f
 #title {    
 		text-align: center;
 		background : #fff url(images/bg.jpg )repeat-x top;  
@@ -517,4 +537,20 @@ body #footer{
 
 body #footer{
 		margin-top: 200px;
+<<<<<<< HEAD
 }
+=======
+
+}
+
+#movielist{
+	width: auto;
+	height: auto;
+	
+}
+
+#movielist table p{
+
+	font : bold 3.0em "宋体";
+}
+>>>>>>> 4662b903b892488ead6be00417d8bfed7b6f706f
