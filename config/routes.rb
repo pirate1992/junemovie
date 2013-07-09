@@ -7,7 +7,6 @@ Junemovie::Application.routes.draw do
 
   resources :movies do
     resources :comments
-    resources :posts
   end
 
   namespace :admin do
