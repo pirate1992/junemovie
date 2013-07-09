@@ -1,4 +1,7 @@
 Junemovie::Application.routes.draw do
+  resources :titles
+
+
   devise_for :users
 
   root :to => "welcome#index"
@@ -12,7 +15,8 @@ Junemovie::Application.routes.draw do
 
   namespace :admin do
     root to: "movies#index"
+
     resources :movies
-    resources :news
+    resources :titles
   end
 end
