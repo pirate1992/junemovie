@@ -10,3 +10,9 @@
 /tmp
 /Gemfile.lock
 /config/database.yml
+/db/migrate/20130709010351_add_image_to_movies.rb
+/app/controllers/admin/posts_controller.rb
+/app/views/admin/posts/edit.html.erb
+/app/views/admin/posts/_form.html.erb
+/app/views/admin/posts/index.html.erb
+/app/views/admin/posts/new.html.erb
