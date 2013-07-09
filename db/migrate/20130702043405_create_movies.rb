@@ -5,6 +5,7 @@
       t.string :poster
       t.text :summary
       t.string :video_file
+
       t.timestamps
     end
   end
