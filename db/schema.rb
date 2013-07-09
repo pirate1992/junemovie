@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130704055155) do
+ActiveRecord::Schema.define(:version => 20130709022123) do
 
   create_table "comments", :force => true do |t|
     t.string   "commenter"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(:version => 20130704055155) do
     t.string   "video_file"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "avatar"
   end
 
   create_table "news", :force => true do |t|
