@@ -1,62 +1,51 @@
-
 <h1><%= @movie.name %></h1>
-<section>	
-   <div id="video">
+<section>
+	<div id="video">
 		<%=video_tag(@movie.video_file, controls: true )%>
-   </div>
+	</div>
 </section>
 <section>
-	<div id="content">	
+	<div id="content1">	
 		<div id="rightmain1"> 
 			<h3><%= @movie.name %>的预告片和图片 · · · · · · </h3>
 				<div class="related-pic-bd narrow">
-           		<% for post in @movie.posts %>
-           		
-           			<li> <%= image_tag(post.image,width:'100',height:'100') %></li>
-           		
-           		<% end %>
-                 </div> 
-    		<h3>喜欢这部电影的人也喜欢 · · · · · ·</h3>
+					<% for post in @movie.posts %>
+						<li> <%= image_tag(post.image) %></li>
+					<% end %>
+				</div> 
+			<h3>喜欢这部电影的人也喜欢 · · · · · ·</h3>
 			<h3>评论</h3>
 			<div id="lr">
 				<% @movie.comments.each do |comment| %>
 				<div id="l">
-					<p><%= image_tag(comment.cimage,width:'45',height:'45') %></p>
+					<p><%= image_tag(comment.cimage) %></p>
 				</div>
 				<div id="r">
-				<p ><b id="user"><%= comment.commenter %></b>:
-				<%= comment.body %>
-				</p>
+					<p ><b id="user"><%= comment.commenter %></b>:
+						<%= comment.body %>
+					</p>
 				</div>
-				<% end %>	
+				<% end %>
 			</div>
-			<%= form_for([@movie, @movie.comments.build]) do |f| %>
-			<div class="field">
-				<%= f.label :用户 %>
-				<%= f.text_field :commenter %>
+			<%= simple_form_for([@movie, @movie.comments.build], html: { class: "form-horizontal" }) do |f| %>
+				<div class="form-inputs">
+						<%= f.input :commenter %>
+						<%= f.input :cimage %>
+						<%= f.input :body %>
+				</div>
+				<div class="form-actions">
+					<%= f.submit class: "btn btn-primary" %>
+				</div>
+			<% end %>
+		</div> 
+			<div id="leftmain1">
+					<p>
+						<b>Name:</b>
+						<%= @movie.name %>
+					<p>
+						<b>Summary:</b></br>
+						<%= @movie.summary %>
+					</p>
 			</div>
-			<div class="field">
-				<%= f.label :评论 %>
-				<%= f.text_field :body %>
-			</div>
-			<div class="field">
-				<%= f.label :头像 %>
-				<%= f.text_field :cimage %>
-			</div>
-			<div class="actions">
-				<%= f.submit %>
-			</div>
-			<% end %>                	
-    	</div> 
-	    	<div id="leftmain1">
-	        	<p id="notice"><%= notice %></p>		
-				<b>Name:</b>
-				<%= @movie.name %></br>
-				<b>Summary:</b>
-				<p><%= @movie.summary %></br>	
-			</div>
-	</div>	
+	</div>
 </section>
-
-<%#= link_to 'Edit', edit_movie_path(@movie) %> 
-<%#= link_to 'Back', movies_path %>
