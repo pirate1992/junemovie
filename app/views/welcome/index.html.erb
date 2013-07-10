@@ -23,8 +23,8 @@
 		</div>
 		<div id="menu">
 			<ul>
-				<% @news.each do |news| %>
-				<li><%= link_to "#{news.headline}", news_path(news) %></li>
+				<% @titles.each do |title| %>
+				<li><%= link_to "#{title.headline}", title_path(title) %></li>
 				<% end %>
 			</ul>
 		</div>
@@ -36,7 +36,7 @@
 			</div>
 		</div>
 		<div id="right1">
-			<p><a href="third 12.html"><h3>随便看看</h3></a></p>
+			<%= link_to "随便看看", movies_path %>
 		</div>
 		<div class="movies">
 			<% @movies.each_slice(4).each do |row| %>
