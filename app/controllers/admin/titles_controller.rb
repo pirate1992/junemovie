@@ -11,7 +11,7 @@ class Admin::TitlesController < Admin::BaseController
   def create
     @title = Title.new(params[:title])
     if @title.save
-      redirect_to admin_titles_path
+      redirect_to  admin_titles_path
     else
       render :new
     end

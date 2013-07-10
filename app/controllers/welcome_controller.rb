@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
   def index
-    @news = News.all
+    @titles = Title.all
     @movies = Movie.all
   end
 end
