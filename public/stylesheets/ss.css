@@ -1,11 +1,11 @@
 body {
-padding : 0;
-margin : 0;
-font : 0.74em Arial, sans-serif;
-line-height : 1.5em;
-background : #fff url(images/bog.jpg )repeat-x top;
-color : #454545;
-}
+	padding : 0;
+	margin : 0;
+	font : 0.74em Arial, sans-serif;
+	line-height : 1.5em;
+	background : #fff url(images/bog.jpg )repeat-x top;
+	color : #454545;
+	}
 
 @-moz-keyframes slide {
     from, to { top: 0; }
