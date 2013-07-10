@@ -320,11 +320,7 @@ h2 {
 		background-color:#f4f4f4;   
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 4662b903b892488ead6be00417d8bfed7b6f706f
-#title {    
+#title {
 		text-align: center;
 		background : #fff url(images/bg.jpg )repeat-x top;  
 		padding : 0;
@@ -491,9 +487,6 @@ body #index{
 		color : #454545;
 }
 
-
-
-
 body #headline{
 		text-align: center;
 		font-size: 250%;
@@ -533,22 +526,5 @@ body #footer{
 .related-pic-bd li{display:inline-block; *display:inline; *zoom:1; vertical-align:top; letter-spacing:normal; margin-right:15px;}
 .related-pic-bd.narrow li{margin-right:3px;}
 
-body #footer{
-		margin-top: 200px;
-<<<<<<< HEAD
-}
-=======
 
-}
 
-#movielist{
-	width: auto;
-	height: auto;
-	
-}
-
-#movielist table p{
-
-	font : bold 3.0em "宋体";
-}
->>>>>>> 4662b903b892488ead6be00417d8bfed7b6f706f

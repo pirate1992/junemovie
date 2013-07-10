@@ -16,6 +16,7 @@
 				<%= link_to 'Show', admin_movie_path(movie) %>
 				<%= link_to 'Edit', edit_admin_movie_path(movie) %>
 				<%= link_to 'Destroy', admin_movie_path(movie), method: :delete, data: { confirm: 'Are you sure?' } %>
+				<%= link_to 'posts', admin_movie_posts_path(movie)%>
 			</td>
 		</tr>
 		<% end %>

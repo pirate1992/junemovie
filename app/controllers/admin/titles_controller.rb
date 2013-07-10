@@ -24,7 +24,7 @@ class Admin::TitlesController < Admin::BaseController
   def update
     @title = Title.find(params[:id])
     if @title.update_attributes(params[:title])
-      redirect_to admin_titles_path
+        redirect_to admin_titles_path
     else
       render :edit
     end
