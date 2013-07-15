@@ -1,0 +1,9 @@
+<div class="form-inputs">
+  <%= f.association :movie %>
+  <%= f.input :image %>
+</div>
+
+<div class="form-actions">
+  <%= f.submit class: "btn btn-primary" %>
+  <%= link_to "Back", admin_posts_path, class: "btn" %>
+</div>

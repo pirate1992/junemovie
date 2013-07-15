@@ -15,7 +15,7 @@ Junemovie::Application.routes.draw do
     resources :movies
     resources :notices
     resources :movies do
-    resources :posts
+      resources :posts
     end
   end
 end

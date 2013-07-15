@@ -5,7 +5,6 @@ class CreateComments < ActiveRecord::Migration
       t.text :body
       t.string :cimage
       t.references :movie
-
       t.timestamps
     end
     add_index :comments, :movie_id

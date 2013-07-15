@@ -1,0 +1,4 @@
+<h1>New post</h1>
+<%= simple_form_for @post, url: admin_posts_path, :html => {:multipart => true,class: "form-horizontal" } do |f| %>
+	<%= render partial: "form", locals: { f: f } %>
+<% end %>
