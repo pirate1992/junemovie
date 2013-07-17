@@ -1,17 +1,5 @@
 class TitlesController < ApplicationController
-  # GET /titles
-  # GET /titles.json
-  def index
-    @titles = Title.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @titles }
-    end
-  end
-
-  # GET /titles/1
-  # GET /titles/1.json
   def show
     @title = Title.find(params[:id])
 
@@ -21,26 +9,7 @@ class TitlesController < ApplicationController
     end
   end
 
-  # GET /titles/new
-  # GET /titles/new.json
-  def new
-    @title = Title.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @title }
-    end
-  end
-
-  # GET /titles/1/edit
-  def edit
-    @title = Title.find(params[:id])
-  end
-
-  # POST /titles
-  # POST /titles.json
-  def create
-    @title = Title.new(params[:title])
 
     respond_to do |format|
       if @title.save

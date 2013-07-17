@@ -1,5 +1,4 @@
 @import "bootstrap";
-
 body {
 		font : 0.8em Arial, sans-serif;
 		line-height : 0.7em;
@@ -399,7 +398,6 @@ form{
 		font-weight: bold;
 		float:left;
 		margin-top: 100px;
-		margin-left: 350px;
 		height:200px;
 }
 
@@ -481,4 +479,9 @@ body #footer{
 .related-pic-bd img{
 	width:100px;
 	height:100px;
+}
+
+#leftmain1 #summary{
+	font: 1.0em Arial, sans-serif;
+	color: #454545;
 }
