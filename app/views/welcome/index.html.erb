@@ -1,49 +1,73 @@
-<div id="header">
-		<h1>六月</h1>
-		<h2>电影开始的地方</h2>
-</div>
-<div class="box">
-<ul class="list">
-	<li class="slide"><%= image_tag("chaoren.jpg")%></li>
-	<li class="slide"><%= image_tag("xiaoxiao.jpg")%></li>
-	<li class="slide"><%= image_tag("huangxiaom.jpg")%></li>
-	<li class="slide"><%= image_tag("shengdan.jpg")%></li>
-</ul>
-<div class="index">
-	<a href="javascript:" class="index_1">1</a>
-	<a href="javascript:" class="index_2">2</a>
-	<a href="javascript:" class="index_3">3</a>
-	<a href="javascript:" class="index_4">4</a>
-</div>
-</div>
-<div id="content">
-	<div id="leftmain">
-		<div id="menutitle">
-			<h3>热映资讯</h3>
-		</div>
+<% content_for :head do %>
+<script type="text/javascript">
+$(function() {
+	$(document).foundation('orbit', {
+		timer_speed: 10000,
+		pause_on_hover: true,
+		resume_on_mouseout: true,
+		animation_speed: 500,
+		bullets: true,
+		stack_on_small: true,
+		container_class: 'orbit-container',
+		stack_on_small_class: 'orbit-stack-on-small',
+		next_class: 'orbit-next',
+		prev_class: 'orbit-prev',
+		timer_container_class: 'orbit-timer',
+		timer_paused_class: 'paused',
+		timer_progress_class: 'orbit-progress',
+		slides_container_class: 'orbit-slides-container',
+		bullets_container_class: 'orbit-bullets',
+		bullets_active_class: 'active',
+		slide_number_class: 'orbit-slide-number',
+		caption_class: 'orbit-caption',
+		active_slide_class: 'active',
+		orbit_transition_class: 'orbit-transitioning'
+	});
+})
+</script>
+<% end %>
+
+<div id="page_one">
+	<ul data-orbit class="orbit-slides-container">
+			<% @movies.each do |movie| %>
+		<li>
+			<%= image_tag("#{movie.avatar_url}") %>
+		</li>
+			<% end %>
+		<li>
+			<%= image_tag("2.jpg", height: '500', width: '900') %>
+		</li>
+		<li class="active">
+			<%= image_tag("xiao.jpg", height: '500', width: '900') %>
+		</li>
+		<li>
+			<%= image_tag("2.jpg", height: '500', width: '900') %>
+		</li>
+		<li>
+			<%= image_tag("xiaoshi.jpg", height: '500', width: '900') %>
+		</li>
+	</ul>
+<div class="row">
+	<div class="large-5 small-6 columns">
 		<div id="menu">
+			<h4>最新电影资讯</h4>
 			<ul>
-				<% @news.each do |news| %>
-				<li><%= link_to "#{news.headline}", news_path(news) %></li>
+				<% @titles.each do |title| %>
+				<li><%= link_to "#{title.headline}", title_path(title) %></li>
 				<% end %>
 			</ul>
 		</div>
 	</div>
-	<div id="rightmain">
-		<div id="left1">
-			<div id="newstitle">
-				<h3>正在热映</h3>
-			</div>
-		</div>
-		<div id="right1">
-			<p><a href="third 12.html"><h3>随便看看</h3></a></p>
-		</div>
-		<div class="movies">
-			<% @movies.each_slice(4).each do |row| %>
+	<div class="large-3 small-6 columns">
+		<%=image_tag("image.png")%>
+	</div>
+	<div class="large-4 small-6 columns">
+		<h4>电影推荐</h4>
+	<div class="movies">
+			<% @movies.each_slice(2).each do |row| %>
 				<div class="row">
 					<% row.each do |movie| %>
-					<div class="movie">	
-
+					<div class="movie">
 						<div class="movie-poster">
 							<%= image_tag("#{movie.avatar_url}") %>
 						</div>
@@ -55,5 +79,19 @@
 				</div>
 			<% end %>
 		</div>
+	<div class="pagination-centered">
+	  <ul class="pagination">
+	    <li class="arrow unavailable"><a href="">&laquo;</a></li>
+	    <li class="current"><a href="">1</a></li>
+	    <li><a href="">2</a></li>
+	    <li><a href="">3</a></li>
+	    <li><a href="">4</a></li>
+	    <li class="unavailable"><a href="">&hellip;</a></li>
+	    <li><a href="">12</a></li>
+	    <li><a href="">13</a></li>
+	    <li class="arrow"><a href="">&raquo;</a></li>
+	  </ul>
 	</div>
+	</div>
+</div>
 </div>
