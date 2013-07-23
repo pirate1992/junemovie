@@ -13,11 +13,8 @@
 #
 
 class Movie < ActiveRecord::Base
-  attr_accessible :name, :poster, :summary, :video_file, :avatar
-
   mount_uploader :avatar, AvatarUploader
 
-  has_many :comments
-
-  has_many :posts
+  has_many :comments, dependent: :destroy
+  validates :name, uniqueness: true, presence: true
 end
