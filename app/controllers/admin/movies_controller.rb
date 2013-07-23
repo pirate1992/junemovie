@@ -9,7 +9,7 @@ class Admin::MoviesController < Admin::BaseController
   end
 
   def create
-    @movie = Movie.new(params[:movie])
+    @movie = Movie.new(params.permit(:movie))
     if @movie.save
       redirect_to admin_movies_path
     else
@@ -23,7 +23,7 @@ class Admin::MoviesController < Admin::BaseController
 
   def update
     @movie = Movie.find(params[:id])
-    if @movie.update_attributes(params[:movie])
+    if @movie.update_attributes(params.permit(:movie))
       redirect_to admin_movies_path
     else
       render :edit

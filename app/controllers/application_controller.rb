@@ -1,10 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  def current_movie
-  	Movie.find(session[:movie_id])
-  rescue ActiveRecord::RecordNotFound
-  	movie =Movie.create
-  	session[:movie_id] = movie.id
-  	movie
+  
+private
+  def after_sign_out_path_for(resource_or_scope)
+    admin_root_path
   end
 end
