@@ -1,5 +1,5 @@
 <h1>New movie</h1>
 
-<%= simple_form_for @movie, url: admin_movies_path, html: { class: "form-horizontal" } do |f| %>
+<%= simple_form_for @movie, url: admin_movies_path, :html => {:multipart => true,class: "form-horizontal" } do |f| %>
 	<%= render partial: "form", locals: { f: f } %>
 <% end %>
