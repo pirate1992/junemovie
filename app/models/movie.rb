@@ -9,6 +9,7 @@
 #  video_file :string(255)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  avatar     :string(255)
 #
 
 class Movie < ActiveRecord::Base

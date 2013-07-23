@@ -1,59 +1,37 @@
-<h1><%= @movie.name %></h1>
 <section>
-
+	<center>
+		<h1><%= @movie.name %></h1>
+		<div id="video">
+			<%=video_tag(@movie.video_file, controls: true ,height:'450px',width:'850px')%>
+		</div>
+	</center>
 </section>
 <section>
-	<div id="content">	
-		<div id="rightmain1"> 
-			<h3><%= @movie.name %>的预告片和图片 · · · · · · </h3>
-				<div class="related-pic-bd narrow">
-           		<% for post in @movie.posts %>
-           		
-           			<li> <%= image_tag(post.image,width:'100',height:'100') %></li>
-           		
-           		<% end %>
-                 </div> 
-    		<h3>喜欢这部电影的人也喜欢 · · · · · ·</h3>
-			<h3>评论</h3>
-			<div id="lr">
-				<% @movie.comments.each do |comment| %>
-				<div id="l">
-					<p><%= image_tag(comment.cimage,width:'45',height:'45') %></p>
+<div id="comment" class="comment_form">
+	<div class="form">
+			<%= simple_form_for ([@movie, @movie.comments.build]) do |f| %>
+			<%= f.input :commenter %>
+			<%= f.input :cimage %>
+			<%= f.input :body %>
+			<%= f.button :submit ,class:"btn btn-success"%>
+			<% end %>
+		</div>
+	</div>
+</div>
+<div class="discusslist">
+	<h4>用户评论区</h4>
+	<marquee direction="up" height="350px" onMouseOver="this.stop()" onMouseOut="this.start()" >
+		<%@movie.comments.each do |comment| %>
+			<li>
+				<%= image_tag(comment.cimage ,class:"img-circle") %>
+				<div class="user">
+					<%=comment.commenter%>
 				</div>
-				<div id="r">
-				<p ><b id="user"><%= comment.commenter %></b>:
-				<%= comment.body %>
-				</p>
+				<div class="connect">
+					<%=comment.body%>
 				</div>
-				<% end %>	
-			</div>
-			<%= form_for([@movie, @movie.comments.build]) do |f| %>
-			<div class="field">
-				<%= f.label :用户 %>
-				<%= f.text_field :commenter %>
-			</div>
-			<div class="field">
-				<%= f.label :评论 %>
-				<%= f.text_field :body %>
-			</div>
-			<div class="field">
-				<%= f.label :头像 %>
-				<%= f.text_field :cimage %>
-			</div>
-			<div class="actions">
-				<%= f.submit %>
-			</div>
-			<% end %>                	
-    	</div> 
-	    	<div id="leftmain1">
-	        	<p id="notice"><%= notice %></p>		
-				<b>Name:</b>
-				<%= @movie.name %></br>
-				<b>Summary:</b>
-				<p><%= @movie.summary %></br>	
-			</div>
-	</div>	
+			</li>
+		<% end %>
+	</marquee>
+</div>
 </section>
-
-<%#= link_to 'Edit', edit_movie_path(@movie) %> 
-<%#= link_to 'Back', movies_path %>
