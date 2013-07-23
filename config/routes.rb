@@ -5,18 +5,19 @@ Junemovie::Application.routes.draw do
   root :to => "welcome#index"
   get 'welcome/index' => "welcome#index"
 
-  resources :titles
+  resources :notices
 
   resources :movies do
     resources :comments
+    resources :posts
   end
 
   namespace :admin do
     root to: "movies#index"
     resources :movies
-    resources :titles
+    resources :notices
     resources :movies do
-      resources :posts
+    resources :posts
     end
   end
 end

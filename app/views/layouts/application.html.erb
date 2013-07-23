@@ -1,25 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Junemovie</title>
+	<title>Demo</title>
 	<%= stylesheet_link_tag    "application", :media => "all" %>
 	<%= javascript_include_tag "application" %>
+	<%= javascript_include_tag "vendor/custom.modernizr" %>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<%= csrf_meta_tags %>
-	<%= stylesheet_link_tag "ss.css.scss" %>
+	<%#= stylesheet_link_tag "ss.css.scss" %>
+	<%= yield(:head)%>
 </head>
 
 <body>
 
-<nav>
-	<ul>
-		<li><a href="/">首页</a></li>
-		<li><a href="users.html">最新电影</a></li>
-		<li><a href="third 12.html">电影随心看</a></li>	
-	</ul>
-</nav>
-
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
 <div>
 	<% if current_user %>
 	<%= link_to('登出', destroy_user_session_path, :method => :delete) %> |
@@ -29,7 +22,14 @@
 	<%= link_to('登入', new_session_path(:user)) %>
 	<% end %>
 </div>
+<nav class="top-bar">
+	<ul class="title-area">
+		<li class="name">
+			<a href="#" class="button radius">首页</a>
 
+		</li>
+	</ul>
+</nav>
 <%= yield %>
 
 </body>

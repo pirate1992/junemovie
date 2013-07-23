@@ -1,1 +1,186 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+@import "foundation";
 @import "bootstrap";
+/* We use these to control the caption styles */
+$orbit-container-bg: #f5f5f5;
+$orbit-caption-bg-old: rgb(0,0,0);
+$orbit-caption-bg: rgba(0,0,0,0.6);
+$orbit-caption-font-color: #fff;
+
+/* We use these to control the left/right nav styles */
+$orbit-nav-bg-old: rgb(0,0,0);
+$orbit-nav-bg: rgba(0,0,0,0.6);
+
+/* We use these to control the timer styles */
+$orbit-timer-bg-old: rgb(0,0,0);
+$orbit-timer-bg: rgba(0,0,0,0.6);
+
+/* We use these to control the bullet nav styles */
+$orbit-bullet-nav-color: #999;
+$orbit-bullet-nav-color-active: #222;
+
+/* We use thes to controls the style of slide numbers */
+$orbit-slide-number-bg: rgba(0,0,0,0);
+$orbit-slide-number-font-color: #fff;
+$orbit-slide-number-padding: emCalc(5);
+
+/* Graceful Loading Wrapper and preloader */
+$wrapper-class: "slideshow-wrapper";
+$preloader-class: "preloader";
+
+#page_one{
+	background:url("beijin.jpg");
+}
+
+.orbit-container {
+	width: 900px;
+	height: 500px;
+	margin-left:200px;
+	margin-top: 50px;
+}
+.orbit-bullets{
+	margin-left:200px;
+}
+.row{
+	width:900px;
+	height:auto;
+	max-width: none;
+	margin-left: 200px;
+	display:inline;
+
+}
+.large-5{
+	width:200px;
+	margin-left:200px;
+}
+.large-3{
+	width:200px;
+}
+
+.large-4 {
+	background:url("meigui.jpg");
+	width: 350px;
+	height: 450px;
+	margin-left: 20px;
+	border: 1px solid #CCC;
+	background-color:#f2f2f2;
+	margin-right:180px;
+}
+.large-4 .movies .row {
+
+	width: 350px;
+	height: 155px;
+	margin-left: 35px;
+	margin-bottom: 40px;
+
+}
+.large-4 .movies .row .movie .movie-poster img {
+	width: 115px;
+	height: 125px;
+
+}
+.large-4 .movies .row .movie {
+	width: 145px;
+	height: 145px;
+	float: left;
+	margin-left: 10px;
+}
+.large-4 .movies .row .movie .movie-name {
+	text-align: center;
+	width: 100%;
+	color:black;
+}
+.large-4 .movies .row .movie .movie-name a:hover {
+	color:red;
+}
+.picture img{
+	width:50px;
+	height:50px;
+}
+.comment_form{
+	margin-left:200px;
+	margin-top:20px;
+	width:500px;
+	height:400px;
+}
+
+#comment_body{
+	height:100px;
+	width:300px;
+}
+#comment_commenter{
+	width:200px;
+	height:50px;
+}
+#comment_cimage{
+	width:200px;
+	height:50px;
+}
+.string optional control-label{
+	height:10px;
+}
+#commentlist h4{
+	color:white;
+}
+.discusslist{
+	width:500px;
+	height:800px;
+	margin-top:-400px;
+	margin-right: 230px;
+	float: right;
+}
+.discusslist li{
+	text-align: center;
+}
+
+.img-circle{
+	width:40px;
+	height:40px;
+}
+.discusslist .user{
+		width: 50px;
+		float:right;
+		margin-right: 400px;
+		margin-top:10px;
+}
+.discusslist .connect{
+	height: 60px;
+	width: 250px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+.discusslist marquee{
+	background:url("bj2.jpg"); 
+}
+#headline{
+	margin-top: 50px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+#con1{
+	font-family: Verdana, sans-serif;
+	text-align: center;
+	text-indent:6px;
+	width: 500px;
+	height: auto;
+}
+#button{
+	float: right;
+	margin-right: 550px;
+	
+}
+.pic{
+	margin-left: 200px;
+}

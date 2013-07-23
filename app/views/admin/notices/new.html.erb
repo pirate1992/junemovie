@@ -1,0 +1,5 @@
+<h1>New notice</h1>
+
+<%= simple_form_for @notice, url: admin_notices_path, html: { class: "form-horizontal" } do |f| %>
+	<%= render partial: "form", locals: { f: f } %>
+<% end %>
