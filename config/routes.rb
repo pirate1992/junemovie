@@ -1,4 +1,6 @@
 Junemovie::Application.routes.draw do
+
+
   devise_for :users, :controllers => { :sessions => "sessions" }
 
   root :to => "welcome#index"
@@ -13,6 +15,7 @@ Junemovie::Application.routes.draw do
     root to: "movies#index"
     resources :movies
     resources :notices
+    resources :categories
     resources :movies do
       resources :posts
     end

@@ -13,8 +13,9 @@
 #
 
 class Movie < ActiveRecord::Base
-  attr_accessible :name, :poster, :avatar, :summary, :video_file
   mount_uploader :avatar, AvatarUploader
+  mount_uploader :poster, PosterUploader
   has_many :comments, dependent: :destroy
- # validates :name, uniqueness: true, presence: true
+  belongs_to :category
+  validates :name, uniqueness: true, presence: true
 end

@@ -28,55 +28,57 @@
 <% end %>
 
 <div id="page_one">
+	<div class="page-one-bg"></div>
 	<ul data-orbit class="orbit-slides-container">
 			<% @movies.each do |movie| %>
 			<li>
-				<%= image_tag("#{movie.avatar_url}") %>
+				<%= image_tag("#{movie.avatar.url}") %>
 			</li>
 			<% end %>
 	</ul>
-	<div class="row">
-		<div class="large-5 small-6 columns">
-			<div id="menu">
-				<h4>最新电影资讯</h4>
-				<ul>
-					<% @notices.each do |notice| %>
-					<li><%= link_to "#{notice.headline}", notice_path(notice) %></li>
-					<% end %>
-				</ul>
-			</div>
-		</div>
-		<div class="large-4 small-6 columns">
-			<h4>电影推荐</h4>
-			<div class="movies">
-				<% @movies.each_slice(2).each do |row| %>
-					<div class="row">
-						<% row.each do |movie| %>
-						<div class="movie">
-							<div class="movie-poster">
-								<%= image_tag("#{movie.avatar_url}") %>
-							</div>
-							<div class="movie-name">
-								<%= link_to "#{movie.name}", movie_path(movie) %>
-							</div>
+	<div class="recommendation">
+		<div class="movies">
+			<% @movies.each_slice(5).each do |row| %>
+			<div class="row">
+				<% row.each do |movie| %>
+					<div class="movie">
+						<div class="movie-poster">
+							<%= image_tag movie.poster.url %>
 						</div>
-						<% end %>
+						<div class="movie-name">
+							<%= link_to "#{movie.name}", movie_path(movie)%>
+						</div>
 					</div>
 				<% end %>
 			</div>
+			<% end %>
 		</div>
-		<div class="pagination-centered">
-			<ul class="pagination">
-				<li class="arrow unavailable"><a href="">&laquo;</a></li>
-				<li class="current"><a href="">1</a></li>
-				<li><a href="">2</a></li>
-				<li><a href="">3</a></li>
-				<li><a href="">4</a></li>
-				<li class="unavailable"><a href="">&hellip;</a></li>
-				<li><a href="">12</a></li>
-				<li><a href="">13</a></li>
-				<li class="arrow"><a href="">&raquo;</a></li>
-			</ul>
-		</div>
+	</div>
+	<div class="section-container auto" data-section>
+		<section>
+			<p class="title" data-section-title><a href="#panel1">动漫电影</a></p>
+			<div class="content" data-section-content>
+				<p>Content of section 1.</p>
+			</div>
+		</section>
+		<section>
+			<p class="title" data-section-title><a href="#panel2">科幻电影</a></p>
+			<div class="content" data-section-content>
+				<p>Content of section 2.</p>
+			</div>
+		</section>
+	</div>
+	<div class="pagination-centered">
+		<ul class="pagination">
+			<li class="arrow unavailable"><a href="">&laquo;</a></li>
+			<li class="current"><a href="">1</a></li>
+			<li><a href="">2</a></li>
+			<li><a href="">3</a></li>
+			<li><a href="">4</a></li>
+			<li class="unavailable"><a href="">&hellip;</a></li>
+			<li><a href="">12</a></li>
+			<li><a href="">13</a></li>
+			<li class="arrow"><a href="">&raquo;</a></li>
+		</ul>
 	</div>
 </div>
