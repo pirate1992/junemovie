@@ -3,7 +3,6 @@ class CreateTitles < ActiveRecord::Migration
     create_table :titles do |t|
       t.string :headline
       t.text :description
-
       t.timestamps
     end
   end

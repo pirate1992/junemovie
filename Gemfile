@@ -17,15 +17,17 @@ gem 'carrierwave'
 gem 'bootstrap-sass', '~> 2.3.2.0'
 gem "zurb-foundation", "~> 4.2.3"
 gem "strong_parameters", "~> 0.2.1"
+gem 'pry-nav'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
+  gem "compass-rails", "~> 1.0.3"
   gem 'coffee-rails', '~> 3.2.1'
-  gem 'compass-rails'
   gem 'uglifier', '>= 1.0.3'
   gem 'jquery-rails'
-  gem 'pry-nav'
 end
+
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
