@@ -1,37 +1,47 @@
-<script>
-function show(){
-document.getElementById("con").style.display="";
-//alert(document.getElementById("div").style.display)
-}
-function hidden(){
-document.getElementById("con").style.display="none";
-//alert(document.getElementById("div").style.display)
-}
-</script>
 
-<div id="headline">
-	<h3><%= @notice.headline %></h3> 
-</div>
-<center>
-	<div id="con1" >
-	<p><%= @notice.description %></p>
+<div class="notice_body">
+	<div class="headline"><%= @notice.headline %></div>
+	<div class="connent">
+		<div class="video">NO file exist</div>
+		<div class="entity">
+			<div >
+				<%= image_tag("xiao2.jpg") %>
+				<p><%= @notice.description %></p>
+			</div>
+		</div>
 	</div>
-</center>
-<center>
-	<h1>PRESS HERE </h1>
-	<input id="button" name="name" type="button" onClick="show();" value="显示">
-	<div id="con"style="display: none" onClick="hidden();">
-		<h2>电影剧照</h2>
-		<%= image_tag(@notice.image,class:"pic") %>
-		<h3>演员简介</h3>
+	<div class="section-container auto" data-section>
+		<section>
+			<p class="title" data-section-title><a href="#panel1">电影</a></p>
+			<div class="content" data-section-content>
+					<% @movies.each do |movie| %>
+						<li>
+						<%= image_tag("#{movie.avatar_url}") %>
+						<p><%= link_to link_to "#{movie.name}", movie_path(movie) %></p>
+						</li>
+				<% end %>
+			</div>
+		</section>
+		<section>
+			<p class="title" data-section-title><a href="#panel2">电视剧</a></p>
+			<div class="content" data-section-content>
+				<p><%= image_tag("xiao3.jpg") %></p>
+			</div>
+		</section>
+	</div>
+	<div class="notice_pic">
 		<marquee>
-			<%=image_tag("xiao1.jpg")%>
-			<%=image_tag("xiao2.jpg")%>
-			<%=image_tag("xiao3.jpg")%>
-			<%=image_tag("xiao5.jpg")%>
+			<%= image_tag(@notice.image_url) %>
+			<%= image_tag("xiao1.jpg") %>
+			<%= image_tag("xiao1.jpg") %>
+			<%= image_tag("xiao1.jpg") %>
 		</marquee>
 	</div>
-</center>
+</div>
+
+
+
+
 
 
 

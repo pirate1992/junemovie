@@ -4,4 +4,5 @@ class WelcomeController < ApplicationController
     @movies = Movie.all
     @catalogue = Catalogue.all
   end
+  
 end
