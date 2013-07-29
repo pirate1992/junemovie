@@ -2,10 +2,10 @@
 <div class="notice_body">
 	<div class="headline"><%= @notice.headline %></div>
 	<div class="connent">
-		<div class="video">NO file exist</div>
+		<div class="video1"><%= video_tag(@notice.video_url, controls: true, autobuffer: true) %></div>
 		<div class="entity">
 			<div >
-				<%= image_tag("xiao2.jpg") %>
+				<%= image_tag("cafa.jpg") %>
 				<p><%= @notice.description %></p>
 			</div>
 		</div>
@@ -17,7 +17,7 @@
 					<% @movies.each do |movie| %>
 						<li>
 						<%= image_tag("#{movie.avatar_url}") %>
-						<p><%= link_to link_to "#{movie.name}", movie_path(movie) %></p>
+						<p><%= link_to "#{movie.name}", movie_path(movie) %></p>
 						</li>
 				<% end %>
 			</div>
@@ -25,16 +25,21 @@
 		<section>
 			<p class="title" data-section-title><a href="#panel2">电视剧</a></p>
 			<div class="content" data-section-content>
-				<p><%= image_tag("xiao3.jpg") %></p>
+				<p><%= image_tag("chaoren2.jpg") %></p>
 			</div>
 		</section>
 	</div>
-	<div class="notice_pic">
+	<div class="notice_titles"><p>其他相关专题</p></div>
+	<div class="notice_marquee">
 		<marquee>
-			<%= image_tag(@notice.image_url) %>
-			<%= image_tag("xiao1.jpg") %>
-			<%= image_tag("xiao1.jpg") %>
-			<%= image_tag("xiao1.jpg") %>
+			<div class="notice_pic">
+				<% @notices.each do |notice| %>
+						<li>
+						<%= image_tag("#{notice.image_url}") %>
+						<p><%= link_to "#{notice.headline}", notice_path(notice) %></p>
+						</li>
+				<% end %>
+			</div>
 		</marquee>
 	</div>
 </div>

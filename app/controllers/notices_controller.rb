@@ -7,5 +7,6 @@ class NoticesController < ApplicationController
   def show
     @notice = Notice.find(params[:id])
     @movies =Movie.all
+    @notices = Notice.all
   end
 end
