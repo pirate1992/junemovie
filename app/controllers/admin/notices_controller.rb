@@ -9,7 +9,7 @@ class Admin::NoticesController < Admin::BaseController
   end
 
   def create
-    @notice = Notice.new(params[:notice])
+    @notice = Notice.new(params[:notice].permit!)
     if @notice.save
       redirect_to admin_notices_path
     else
@@ -23,7 +23,7 @@ class Admin::NoticesController < Admin::BaseController
 
   def update
     @notice = Notice.find(params[:id])
-    if @notice.update_attributes(params[:notice])
+    if @notice.update_attributes(params[:notice].permit!)
         redirect_to admin_notices_path
     else
       render :edit
